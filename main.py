@@ -19,7 +19,7 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 templates = Jinja2Templates(directory="templates")
 
-JWT_SECRET = os.getenv("JWT_SECRET", "super-secret-key-change-in-prod")
+JWT_SECRET = os.getenv("JWT_SECRET")
 JWT_ALGORITHM = os.getenv("JWT_ALGORITHM", "HS256")
 
 origins = [
